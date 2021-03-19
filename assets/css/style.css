@@ -1,0 +1,46 @@
+:root {
+    --textGray: rgb(175, 174, 174);
+    --colorBG: rgb(85, 26, 26);
+}
+
+body {
+    background-color: var(--colorBG);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--textGray);
+}
+
+header {
+    
+    text-align: center;
+}
+
+header h1 {   
+    font-size: 55px;
+    margin: 16px;
+}
+
+header p {
+    font-size: 16px;
+    width: 50%;
+    margin: 10px auto 10px auto;
+}
+
+.card {
+    border: 3px dashed var(--textGray);
+    margin: 20px;
+    width: 25%;
+}
+
+.card-h {
+    font-size: 24px;
+    margin: -20px 20px;
+    position: relative;
+    border-style: solid;
+    background-color: var(--colorBG);
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+.card-content {
+    margin: 10px;
+}
