@@ -1,6 +1,13 @@
 :root {
-    --textGray: rgb(175, 174, 174);
-    --colorBG: rgb(85, 26, 26);
+    --textGray: rgb(19, 70, 25);
+    --colorBG: rgb(146, 146, 146);
+    --codeBlockBG: rgb(57, 112, 64);
+    --textCodeBlock: rgb(48, 48, 48);
+}
+
+/* This will size conversions as follows: 10px = 1rem */
+html {
+    font-size: 62.5%;
 }
 
 body {
@@ -15,32 +22,53 @@ header {
 }
 
 header h1 {   
-    font-size: 55px;
-    margin: 16px;
+    font-size: 5.5rem;
+    margin: 1.6rem;
 }
 
 header p {
-    font-size: 16px;
+    font-size: 1.6rem;
     width: 50%;
-    margin: 10px auto 10px auto;
+    margin: 1.0rem auto 1.0rem auto;
 }
 
 .card {
-    border: 3px dashed var(--textGray);
-    margin: 20px;
+    border: 0.3rem dashed var(--textGray);
+    margin: 2.4rem;
+    padding: 1.0rem;
+    /* padding: 24px 12px 12px 12px; */
     width: 25%;
 }
 
 .card-h {
-    font-size: 24px;
-    margin: -20px 20px;
     position: relative;
-    border-style: solid;
+    font-size: 3.2rem;
+    font-weight: bolder;
+    margin: -2.0rem 0rem 0rem 0rem;
+    padding: 0.4rem;
     background-color: var(--colorBG);
-    border-width: 2px;
+    border: 2px solid;
     border-radius: 5px;
 }
 
+/* text inside the box excluding the heading */
 .card-content {
-    margin: 10px;
+    margin: 1.0rem 1.0rem 1.0rem 1.0rem;
+}
+
+.blurb {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.codeblock {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(19, 19, 19);
+    margin: 1.0rem;
+    padding: 1.0rem;
+    font-size: 1.3rem;
+    background-color: var(--codeBlockBG);
+    border-radius: 0.8rem;
+    flex-grow: 1;
+    /* border: 8px var(--codeBlockBG) solid; */
 }
