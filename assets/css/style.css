@@ -14,37 +14,55 @@ body {
     background-color: var(--colorBG);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: var(--textGray);
+    line-height: 1.5;
 }
 
 header {
-    
+    width: 95%;
     text-align: center;
+    margin: 0 auto;
 }
 
 header h1 {   
     font-size: 5.5rem;
-    margin: 1.6rem;
+    /* margin: 1.6rem; */
 }
 
 header p {
     font-size: 1.6rem;
-    width: 50%;
-    margin: 1.0rem auto 1.0rem auto;
+    /* width: 50%; */
+    /* margin: 1.0rem auto 1.0rem auto; */
+}
+
+main {
+    width: 95%;
+    margin: 2rem auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* margin-left: -1.0rem;
+    margin-right: -1.0rem; */
+    justify-content: center;
 }
 
 .card {
+    flex: 1 0 100%;
+    /* max-width: 33.333%; */
     border: 0.3rem dashed var(--textGray);
-    margin: 2.4rem;
+    margin: 0.8rem;
+    margin-bottom: 2.4rem;
     padding: 1.0rem;
-    /* padding: 24px 12px 12px 12px; */
-    width: 25%;
+    transition: flex-basis 500ms linear;
 }
 
 .card-h {
     position: relative;
     font-size: 3.2rem;
     font-weight: bolder;
-    margin: -2.0rem 0rem 0rem 0rem;
+    margin: -3.0rem 0rem 0rem 0rem;
     padding: 0.4rem;
     background-color: var(--colorBG);
     border: 2px solid;
@@ -53,6 +71,11 @@ header p {
 
 /* text inside the box excluding the heading */
 .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding: 2rem;
     margin: 1.0rem 1.0rem 1.0rem 1.0rem;
 }
 
@@ -61,6 +84,10 @@ header p {
     font-size: 1.5rem;
 }
 
+/* .card-content .codeblock {
+    flex-grow: 1;
+} */
+
 .codeblock {
     font-family: 'Courier New', Courier, monospace;
     color: rgb(19, 19, 19);
@@ -68,7 +95,32 @@ header p {
     padding: 1.0rem;
     font-size: 1.3rem;
     background-color: var(--codeBlockBG);
-    border-radius: 0.8rem;
-    flex-grow: 1;
+    border-radius: 8px;
+    /* flex-grow: 1; */
+    white-space: pre-wrap;
+    overflow:auto;
+    tab-size: 4;
+    display: flex;
+    align-items: center;
     /* border: 8px var(--codeBlockBG) solid; */
+}
+
+@media screen and (min-width: 768px) {
+    .card {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .card-column:last-child {
+        flex-grow: 1;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .card {
+        flex: 0 0 30%;
+        max-width: 30%;
+    }
+    header {
+        width: 75%;
+    }
 }
